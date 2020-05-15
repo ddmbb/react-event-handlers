@@ -9,14 +9,14 @@ export default class Accordion extends Component {
     activeSectionIndex: null,
   };
 
-  handleSetActiveSecion = (sectionIndex) => {
+  handleSetActiveSection = (sectionIndex) => {
     this.setState({ activeSectionIndex: sectionIndex });
   };
 
   renderItem(section, idx, activeSectionIndex) {
     return (
       <li className="Accordion__item" key={idx}>
-        <button type="button" onClick={() => this.handleSetActiveSecion(idx)}>
+        <button type="button" onClick={() => this.handleSetActiveSection(idx)}>
           {section.title}
         </button>
         {activeSectionIndex === idx && <p>{section.content}</p>}
